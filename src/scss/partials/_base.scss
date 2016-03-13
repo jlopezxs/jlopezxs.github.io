@@ -28,9 +28,9 @@ body {
     right: 0;
     bottom: 0;
     border-top: 1600px solid transparent;
-    border-left: 2000px solid #EEE;
+    border-left: 2000px solid $base-background-color-line;
     z-index: 2;
-    content: "x";
+    content: ".";
   }
 }
 
