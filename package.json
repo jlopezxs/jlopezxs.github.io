@@ -7,6 +7,7 @@
     "publish": "npm run compile && bin/publish"
   },
   "devDependencies": {
+    "critical": "^0.7.1",
     "gh-pages": "^0.11.0",
     "harp": "^0.20.1"
   }

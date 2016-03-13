@@ -2,14 +2,25 @@
 
 var gh_pages = require('gh-pages');
 var path = require('path');
+var critical = require('critical');
 var dist = path.join(__dirname, '..', 'dist');
 
-gh_pages.publish(dist, {
-	branch: 'master',
-	repo: 'https://github.com/jlopezxs/jlopezxs.github.io.git'
-}, function(error) {
-	if (error) {
-		console.error(error);
-		return process.exit(error.code || 1);
-	}
+critical.generate({
+    inline: true,
+    base: 'dist/',
+    src: 'index.html',
+    dest: 'dist/index.html',
+    minify: true,
+    width: 1300,
+    height: 900
+}).then(function(){
+	gh_pages.publish(dist, {
+		branch: 'master',
+		repo: 'https://github.com/jlopezxs/jlopezxs.github.io.git'
+	}, function(error) {
+		if (error) {
+			console.error(error);
+			return process.exit(error.code || 1);
+		}
+	});
 });
