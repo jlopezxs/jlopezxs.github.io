@@ -1,0 +1,73 @@
+/*
+ * Colors
+ */
+$white: #FFFFFF;
+$black: #000000;
+$dark-gray: lighten($black, 20%);
+$gray: lighten($black, 40%);
+$light-gray: lighten($black, 60%);
+
+
+$primary: #1684FB;
+$secondary: #FF5500;
+
+$twitter: #55acee;
+$github: #000000;
+$linkedin: #0077B5;
+
+$colors: (
+	"primary": $primary, 
+	"secondary": $secondary,
+	"twitter": $twitter,
+	"github": $github,
+	"linkedin": $linkedin
+);
+
+/*
+ * Fonts
+ */
+$body-font: "Helvetica Neue", Helvetica,sans-serif;
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+/*
+ * Base Config
+ */
+$base-background-color: #F5F8FA;
+$base-font-color: $dark-gray;
+$base-font-family: $body-font, sans-serif;
+$base-font-size: rem(12);
+$base-font-weight: $medium;
+$base-line-height: rem(20);
+
+/*
+ * Grid Config
+ */
+$grid-width: 1170px;
+$grid-max-width: 1170px;
+$grid-columns: 12;
+$grid-gutters: rem(30);
+
+/*
+ * Components Config
+ */
+$component-border-radius: 4px;
+
+/* Buttons */
+$btn-default-background: #EBEEF0;
+$btn-default-background-hover: #737980;
+$btn-default-color: #737980;
+$btn-default-color-hover: $white;
+$btn-padding-vertical: rem(10);
+$btn-padding-horizontal: rem(20);
+
+/* Card */
+$card-background: $white;
+$card-border-radius: $component-border-radius;
+$card-gutters: $grid-gutters;
+$card-padding-vertical: rem(40);
+$card-padding-horizontal: rem(40);

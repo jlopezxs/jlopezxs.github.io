@@ -1,0 +1,143 @@
+html, body{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow: hidden;
+  background: $base-background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 1600px solid transparent;
+    border-left: 2000px solid #EEE;
+    z-index: 2;
+    content: "x";
+  }
+}
+
+::selection {
+  background: rgba($primary, 0.6);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 rem(10);
+  color: $base-font-color;
+  font-weight: $bold;
+}
+
+h1 {
+  font-size: rem(40);
+  line-height: rem(40);
+}
+
+h2 {
+  font-size: rem(30);
+  line-height: rem(30);
+}
+
+h3 {
+  font-size: rem(24);
+  line-height: rem(24);
+}
+
+h4 {
+  font-size: rem(18);
+  line-height: rem(18);
+}
+
+h5 {
+  font-size: rem(15);
+  line-height: rem(15);
+}
+
+h6 {
+  font-size: rem(12);
+  line-height: rem(12);
+}
+
+.title {
+  color: $dark-gray;
+  font-size: 18px;
+  margin: 0 0 rem(10);
+}
+
+p {
+  margin: 0 0 rem(10);
+  font-size: rem(12);
+}
+
+a {
+  color: $dark-gray;
+  text-decoration: none;
+  border-bottom: 1px solid $dark-gray;
+  &:focus,
+  &:hover {
+    color: $primary;
+    border-bottom: 1px solid $primary;
+  }
+}
+
+blockquote {
+  display: block;
+  margin: 0 0 rem(10);
+  color: $dark-gray;
+  font-size: rem(18);
+  line-height: rem(26);
+
+  &:before,
+  &:after {
+    content: "'";
+    display: inline;
+    color: inherit;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    &:before {
+      content: '';
+      display: inline-block;
+      background: #B9C2CC;
+      width: 6px;
+      height: 6px;
+      border-radius: 10px;
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+    }
+  }
+
+  ul {
+    margin: 0 0 0 15px;
+  }
+}
+
+ol {
+  padding: 0 0 0 15px;
+}
+
+hr {
+  background: #EBEEf0;
+  height: 2px;
+  border: 0;
+  margin: rem(30) 0;
+}
