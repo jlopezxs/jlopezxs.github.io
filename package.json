@@ -2,7 +2,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "preview": "harp server src",
+    "develop": "harp server src",
     "compile": "harp compile src dist",
     "publish": "npm run compile && bin/publish"
   },
