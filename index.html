@@ -34,7 +34,14 @@ body,html{overflow:hidden;height:100%;display:-webkit-box;display:-webkit-flex;d
 		</div>
 	</div>
 </section>
-  	
+  	<script>
+		
+var connectionType = 'cellular';
+if(navigator && navigator.connection) {
+  connectionType = navigator.connection.type;
+}
+alert(connectionType);
+	  </script>
   	
   </body>
 </html>
