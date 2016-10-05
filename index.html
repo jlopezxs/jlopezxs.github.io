@@ -36,11 +36,17 @@ body,html{overflow:hidden;height:100%;display:-webkit-box;display:-webkit-flex;d
 </section>
   	<script>
 		
-var connectionType = 'cellular';
-if(navigator && navigator.connection) {
-  connectionType = navigator.connection.type;
-}
-alert(connectionType);
+fetch('http://dragons.sftapi.com/api/frames')
+  .then(response => response.json())
+  .then(data => {
+    const app = data[0];
+    let iframe = document.createElement('iframe');
+    //iframe.sandbox = 'allow-scripts allow-popups allow-top-navigation';
+    console.log(data);
+    iframe.src = app.clickUrl;
+    document.body.appendChild(iframe);
+    console.log('iframe.contentWindow =', iframe.contentWindow);
+  });
 	  </script>
   	
   </body>
