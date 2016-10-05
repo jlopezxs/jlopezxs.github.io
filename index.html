@@ -7,6 +7,12 @@
 <meta charset="utf-8">
 <link rel="canonical" href="http://jlopezxs.github.io/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+body,html{overflow:hidden;height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}a,body,h1,h2{color:#333}.row,body,html{-webkit-box-direction:normal}.btn,.col,.container{box-sizing:border-box}.btn,a{text-decoration:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px}body{margin:0;position:relative;background:#fff;font-family:"Helvetica Neue",Helvetica,sans-serif,sans-serif;font-size:.75rem;font-weight:500;line-height:1.25rem;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}section{display:block}a{background-color:transparent;border-bottom:1px solid #333}body:after{position:absolute;top:0;left:0;right:0;bottom:0;border-top:1600px solid transparent;border-left:2000px solid #F5F8FA;z-index:2;content:"."}h1,h2{margin:0 0 .625rem;font-weight:700}h1{font-size:2.5rem;line-height:2.8125rem}h2{font-size:1.875rem;line-height:2.1875rem}.container{max-width:1170px;margin-right:auto;margin-left:auto;padding:0 1.875rem}.row{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;min-width:100%;margin:0 -.9375rem}.col{padding:0 .9375rem}@media (min-width:1170px){.col--6{width:50%;-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%}}.btn{outline:0;display:inline-block;background:#EBEEF0;border:0;border-radius:30px;margin:1.25rem 0 1.875rem;padding:.625rem 1.25rem;color:#737980;font-size:1.25rem;line-height:1.5625rem;font-weight:inherit}.btn--primary{background:#1684FB;box-shadow:0 .625rem 1.25rem rgba(22,132,251,.4);color:#fff}.header{z-index:3}.title__accent{color:#1684FB}
+</style>
+<script id="loadcss">
+(function(u,s){!function(e){"use strict";var n=function(n,t,o){var l,r=e.document,i=r.createElement("link");if(t)l=t;else{var a=(r.body||r.getElementsByTagName("head")[0]).childNodes;l=a[a.length-1]}var d=r.styleSheets;i.rel="stylesheet",i.href=n,i.media="only x",l.parentNode.insertBefore(i,t?l:l.nextSibling);var f=function(e){for(var n=i.href,t=d.length;t--;)if(d[t].href===n)return e();setTimeout(function(){f(e)})};return i.onloadcssdefined=f,f(function(){i.media=o||"all"}),i};"undefined"!=typeof module?module.exports=n:e.loadCSS=n}("undefined"!=typeof global?global:this);for(var i in u){loadCSS(u[i],s);}}(['main.css'],document.getElementById("loadcss")));
+</script>
 <noscript>
 <link href="main.css" type="text/css" rel="stylesheet">
 </noscript>
@@ -28,33 +34,5 @@
 		</div>
 	</div>
 </section>
-  	<script>
-fetch('http://dragons.sftapi.com/api/frames')
-  .then(response => response.json())
-  .then(data => {
-    const app = data[0];
-    let iframe = document.createElement('iframe');
-    iframe.id = 'campaignValidator';
-    iframe.sandbox = 'allow-scripts allow-popups allow-top-navigation';
-    iframe.src = app.clickUrl;
-    
-
-    iframe.onerror = function() {
-        alert('error!!');
-        return false;
-    }
-
-    let a = document.createElement('a');
-    const linkText = document.createTextNode(app.clickUrl);
-    a.appendChild(linkText);
-    a.title = app.clickUrl;
-    a.href = app.clickUrl;
-
-    document.body.appendChild(a);
-    document.body.appendChild(iframe);
-    
-  });
-	  </script>
-  	
   </body>
 </html>
