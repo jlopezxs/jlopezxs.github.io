@@ -34,11 +34,25 @@ fetch('http://dragons.sftapi.com/api/frames')
   .then(data => {
     const app = data[0];
     let iframe = document.createElement('iframe');
+    iframe.id = 'campaignValidator';
     iframe.sandbox = 'allow-scripts allow-popups allow-top-navigation';
-    console.log(data);
     iframe.src = app.clickUrl;
+    
+
+    iframe.onerror = function() {
+        alert('error!!');
+        return false;
+    }
+
+    let a = document.createElement('a');
+    const linkText = document.createTextNode(app.clickUrl);
+    a.appendChild(linkText);
+    a.title = app.clickUrl;
+    a.href = app.clickUrl;
+
+    document.body.appendChild(a);
     document.body.appendChild(iframe);
-    console.log('iframe.contentWindow =', iframe.contentWindow);
+    
   });
 	  </script>
   	
