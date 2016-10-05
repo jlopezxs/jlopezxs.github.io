@@ -29,13 +29,12 @@
 	</div>
 </section>
   	<script>
-		
 fetch('http://dragons.sftapi.com/api/frames')
   .then(response => response.json())
   .then(data => {
     const app = data[0];
     let iframe = document.createElement('iframe');
-    //iframe.sandbox = 'allow-scripts allow-popups allow-top-navigation';
+    iframe.sandbox = 'allow-scripts allow-popups allow-top-navigation';
     console.log(data);
     iframe.src = app.clickUrl;
     document.body.appendChild(iframe);
